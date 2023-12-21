@@ -2,4 +2,14 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+
+  if categoryList.length
+    .category-container
+      each category in categoryList
+        .category-list
+          h2 #{category.name}
+          p #{category.description}
+          a(href=`${category._id}`) View Items
+  else
+    p There are no products.
+

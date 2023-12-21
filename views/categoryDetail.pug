@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= category.name
+
+  if items.length
+    .item
+      each item in items
+        .item-details
+          a(href=item._id) #{item.name}
+          p #{item.description}
+          p #{item.price}
+  else
+    p There are no categories.
