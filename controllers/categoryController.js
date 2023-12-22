@@ -53,7 +53,7 @@ exports.category_create_post = [
     .escape()
     .withMessage("Category name must be specified."),
     
-    body("description")
+  body("description")
     .trim()
     .isLength({min: 10, max: 200})
     .escape()
@@ -90,7 +90,7 @@ exports.category_create_post = [
           // Save it 
           await category.save()
         
-          // Redirect to new author record.
+          // Redirect to new category record.
           res.redirect(category.url)
         }
       }
@@ -188,7 +188,7 @@ exports.category_update_post = [
           title: "Update Category",
           category: category,
           errors: errors.array()
-        })
+      })
 
         console.log("There was an error")
 
