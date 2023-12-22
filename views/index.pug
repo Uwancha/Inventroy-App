@@ -9,7 +9,11 @@ block content
         .category-list
           h2 #{category.name}
           p #{category.description}
-          a(href=`${category._id}`) View Items
+          .links
+            a(href=`${category._id}`) View Items
+            a(href=`/category/${category._id}/delete`) Delete
+            a(href=`/category/${category._id}/update`) Update
+
   else
     p There are no products.
 
