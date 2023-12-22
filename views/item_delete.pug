@@ -1,0 +1,15 @@
+extends layout 
+
+block content
+
+    if noitem
+        p= noitem
+
+    if item
+        p Do you really want to delete this item?
+
+        form(method='POST')
+            div
+                input(type='hidden', name='itemid', value=item._id )
+
+            button(type='submit') Delete
