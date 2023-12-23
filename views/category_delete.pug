@@ -6,21 +6,25 @@ block content
 
   if items.length
 
-    p #[strong Delete the following items before attempting to delete this category.]
+    .confirm
+      p #[strong Delete the following items before attempting to delete this category.]
     div(style='margin-left:20px;margin-top:20px')
-      h4 Items
       .item
         each item in items
           .item-details
-          a(href=item._id) #{item.name}
-          p #{item.description}
-          p #{item.price}
+            h2 #{item.name}
+            p #{item.description}
+            p Price: $#{item.price}
+          .crud-actions
+            a(href=`/category/item/delete/${category._id}/${item._id}`) Delete 
+            a(href=`item/update/${category._id}/${item._id}`) Update Item
 
   else
-    p Do you really want to delete this category?
+    .delete
+      p Do you really want to delete this category?
 
-    form(method='POST')
-      div
-        input(type='hidden', name='categoryid', value=category._id )
+      form(method='POST')
+        div
+          input(type='hidden', name='categoryid', value=category._id )
 
-      button(type='submit') Delete
+        button(type='submit') Delete

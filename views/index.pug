@@ -10,7 +10,7 @@ block content
           h2 #{category.name}
           p #{category.description}
           .links
-            a(href=`${category._id}`) View Items
+            a(href=`/category/${category._id}`) View Items
             a(href=`/category/${category._id}/delete`) Delete
             a(href=`/category/${category._id}/update`) Update
 

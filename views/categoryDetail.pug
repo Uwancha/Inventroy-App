@@ -1,15 +1,16 @@
 extends layout
 
 block content
-  h1= category.name
-  a(href=`item/create/${category._id}`) Add Item
+  .hero
+    h1 Items in #{category.name}
+    a(href=`item/create/${category._id}`) Add Item
   if items.length
     .item
       each item in items
         .item-details
           h2 #{item.name}
           p #{item.description}
-          p #{item.price}
+          p Price: $#{item.price}
         .crud-actions
           a(href=`/category/item/delete/${category._id}/${item._id}`) Delete 
           a(href=`item/update/${category._id}/${item._id}`) Update Item
