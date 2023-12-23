@@ -4,6 +4,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const compression = require('compression');
+const helmet = require('helmet')
 
 // Routes
 const indexRouter = require('./routes/index');
@@ -31,6 +33,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(helmet());
+
+// Compress all routes 
+app.use(compression());
+
+const RateLimit = require('express-rate-limit');
+
+const limiter = RateLimit({
+  windoMs: 1 * 60 * 1000,
+  max: 20
+})
+
+app.use(limiter)
 
 app.use('/', indexRouter);
 app.use('/', categoryRouter);
