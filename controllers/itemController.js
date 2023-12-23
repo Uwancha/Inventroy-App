@@ -2,7 +2,6 @@ const Item = require("../models/item");
 const Category = require("../models/category")
 const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
-const category = require("../models/category");
 
 
 // Display Item create form on GET.
