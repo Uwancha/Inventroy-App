@@ -146,7 +146,7 @@ exports.category_update_get = asyncHandler(async (req, res, next) => {
     // No category found
     const err = new Error('Category Not found');
 
-    err.status == 4040;
+    err.status == 404;
 
     return next(err);
   }
