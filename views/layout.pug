@@ -12,5 +12,11 @@ html
         a(href='/category/create') Add New
       li
         a(href='/about') About 
+      li
+        if (!admin)
+          a(href='/login') Login
+        else
+          a(href='/logout') Log Out
+
 
     block content
