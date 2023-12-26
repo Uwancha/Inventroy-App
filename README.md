@@ -18,7 +18,7 @@ Welcome to the Inventory Application, an Express app. This app serves as an Inve
 
 ## Features
 
-- **Categories and Items:** The app allows users to create, read, update, and delete both categories and items.
+- **Categories and Items:** The app allows users to create, read, update, and delete both categories and items. **Update:** Only admins can delete and update an item or a category.
 - **CRUD Operations:** All CRUD (Create, Read, Update, Delete) operations are supported for items and categories.
 - **Intuitive Navigation:** Users can easily navigate through categories and view corresponding items on the home page.
 - **Database Integration:** MongoDB is used as the database, with schemas and models defining the structure of categories and items.
