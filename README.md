@@ -4,6 +4,15 @@
 
 Welcome to the Inventory Application, an Express app. This app serves as an Inventory management system for an imaginary store, allowing users to categorize and manage items seamlessly. Whether you are selling groceries, car parts, baby toys, or anything else, this app provides a robust solution for your inventory needs.
 
+![home page image](./assets/home.png)
+
+![items page image](./assets/items.png)
+
+![create category page image](./assets/category.png)
+
+![login page image](./assets/login.png)
+
+
 ## Technologies Used
 
 - **Node.js:** The backend of the application is built on Node.js, providing a scalable and efficient server environment.
