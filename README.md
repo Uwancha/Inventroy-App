@@ -12,6 +12,9 @@ Welcome to the Inventory Application, an Express app. This app serves as an Inve
 
 ![login page image](./assets/login.png)
 
+## Live preview
+
+You can find the app [here](https://inventory-app.adaptable.app)
 
 ## Technologies Used
 
