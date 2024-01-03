@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Inventory Application, an Express app. This app serves as an Inventory management system for an imaginary store, allowing users to categorize and manage items seamlessly. Whether you are selling groceries, car parts, baby toys, or anything else, this app provides a robust solution for your inventory needs.
+Inventory Application, an Express app. This app serves as an Inventory management system for an imaginary store, allowing users to create, read, update, and delete both categories and items. Only admins can delete and update an item or a category.
 
 ![home page image](./assets/home.png)
 
