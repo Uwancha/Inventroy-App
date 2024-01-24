@@ -6,7 +6,6 @@ const { body, validationResult } = require("express-validator");
 // Display list of all Categories.
 exports.category_list = asyncHandler(async (req, res, next) => {
   const categoryList = await Category.find().sort({name:1}).exec();
-  console.log(categoryList)
 
   res.render('index', {
     title: "Products",
@@ -189,8 +188,6 @@ exports.category_update_post = [
           category: category,
           errors: errors.array()
       })
-
-        console.log("There was an error")
 
         return 
       } else {
