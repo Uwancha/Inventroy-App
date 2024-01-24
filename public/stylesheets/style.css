@@ -206,6 +206,38 @@ button:hover {
   text-align: center;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .category-container {
+    width: 80%;
+  }
+
+  .category-list {
+    padding: .5rem 1rem;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+
+  .links * {
+    font-size: 14px;
+    padding: .2rem;
+  }
+
+  .item {
+    width: 80%;
+  }
+
+  .form {
+    width: 80%;
+  }
+}
+
 
 
 
